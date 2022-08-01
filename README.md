@@ -82,6 +82,7 @@ OR
 
 4.  Type a commit message and then type `C-c C-c`.
 
+5.  To push your local changes to the remote GitHub repo, type `Pp`.
 
 
 ### Markdown
