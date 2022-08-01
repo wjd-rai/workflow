@@ -3,9 +3,20 @@
 This is just a simple note on how I take notes while working for the purposes of record keeping,
 for showing myself and others what I've done, what worked, didn't work, etc.
 
+
+**Contents**
+
+- [Quick-start](#quick-start)
+- [More details](#more-details)
+    - [Magit](#magit)
+    - [Markdown](#markdown)
+
+
+--------------
+
 ## Quick-start
 
-1. Make a new local git repository.
+1. **Make a new local git repository**.
 
    ```
    mkdir workflow
@@ -13,37 +24,45 @@ for showing myself and others what I've done, what worked, didn't work, etc.
    git init
    ```
 
-2. Make a remote GitHub repository.
+2. **Make a remote GitHub repository**.
 
    In your browser, go to [github.com][], login, click the `+` icon on the top right and select "New repository."
    Give it a name, description, make it public or private and click the green button to create the remote repository.
    
-3. Link the remote and local repository.
+3. **Link the remote and local repository**.
 
    After creating a new repository, you'll see a bunch of suggested ways to set it up.
    Copy the stuff in the section "…or push an existing repository from the command line."
    In the terminal window, at the command line, paste the stuff you just copied.   
    
-4. Create a README.md file for keeping notes. In the terminal, in the new repository directory, enter
+4. **Create or edit a file in Emacs**.
+
+   I like to create a new directory for each new task or collection of tasks I work on and,
+   inside of that directory, create a `README.md` file containing notes about my work on the task.
+
+   In the terminal, in the new repository directory, enter
 
    ```
    emacs README.md
    ```
 
-5. Make some notes.
+5. **Make some notes**.
 
-   In Emacs, edit the README.md file using the markdown markup language.
+   In Emacs, edit the `README.md` file using the Markdown markup language.
    
-   If you don't know about Markdown, see [Markdown](#markdown)
+   If you don't know about Markdown, see the [Markdown](#markdown) section below.
    
-6. Commit and push your notes to the cloud *from within Emacs*!
+6. **Commit and push your notes to your repo from within Emacs**.
 
-   Save your work frequently!  In Emacs, type `C-x C-s`.
+   This is the best part!  It will end up saving you a lot of keystrokes and mouse movement.
+   
+   In Emacs, type `C-x C-s` to save your work.  I recommend doing this *very* often. (I tend to do it after every single edit.)
    
    Use [magit](#magit) to commit changes to the local repository and push the changes to the remote (GitHub) repo as well.
    
    If you don't know about magit, see the [magit](#magit) section below.
 
+----------------------
 
 ## More details
    
@@ -97,7 +116,33 @@ Markdown files in a matter of minutes.
 There are many resources on the web that teach you how to do this. Here are some
 examples that a quick Google search turns up: [markdowntutorial.com][] or [markdownguide.org][].
    
+#### Markdown tips
+
+There are many tricks for making short work of creating nice looking, useful notes in Markdown (including ToC generation, images, hyperlinks, etc).
+For example, you can install the Emacs package `markdown-toc` to make the command `markdown-toc-generate-toc` available;
+it generates tables of contents (like the one at the top of this `README.md` file!).
+
+Here are a few of my favorite markdown features.
+
+-  **Hyperlinks**. I like to collect all of them at the bottom of the markdown file.  If I put 
+
+   `[GitHub.com]: https://github.com/`
+
+   at the bottom of my file, then I can include the hyperlink [GitHub][], by simply writing `[GitHub][]`.
+   
+-  **Images**.  I often take a screenshot of something I did and store them in a subdirectory of my repo called `img`.
+   Then, if I want the screenshot in the image file, say, `task1-error.png`, to appear in my notes, I include the 
+   following line in my notes markdown file.
+
+   ```
+   ![screenshot of error encountered during task 1](img/task1-error.png)
+   ```
+   
+   
+----------------------------------
+
 
 [github.com]: https://github.com/
+[GitHub.com]: https://github.com/
 [markdowntutorial.com]: https://www.markdowntutorial.com/
 [markdownguide.org]: https://www.markdownguide.org/
