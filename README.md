@@ -70,10 +70,17 @@ OR
     * In the mini-buffer that appears at the bottom of the Emacs window, type `package-install` and hit `Enter`.
     * In the mini-buffer, type `magit` and hit `Enter`.
 
-Now, after you make some changes to your emacs file that you want to commit to your repository, type `M-x magit`
-This should spawn a new Emacs buffer window showing you the status of your local repository.
-Move the cursor to the line of a file in the "Unstaged changes" section and type `s` (for "stage").
-If you want to stage all the files listed in the "Unstaged changes" section type `S` (for "stage all")
+#### Using magit
+
+1.  After you make some changes to your emacs file that you want to commit to your repository, type `M-x magit`
+    This should spawn a new Emacs buffer window showing you the status of your local repository.
+
+2.  Move the cursor to the line of a file in the "Unstaged changes" section and type `s` (for "stage").
+    If you want to stage all the files listed in the "Unstaged changes" section type `S` (for "stage all").
+    
+3.  Type `cc` (for "commit").  This will bring up a new buffer where you can insert a new commit message.
+
+4.  Type a commit message and then type `C-c C-c`.
 
 
 
