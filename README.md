@@ -92,7 +92,10 @@ OR
 #### Using magit
 
 1.  After you make some changes to your emacs file that you want to commit to your repository, type `M-x magit`
-    This should spawn a new Emacs buffer window showing you the status of your local repository.
+    This should spawn a new Emacs buffer window showing you the status of your local repository.  An example is shown below.
+    
+    ![screenshot of magit buffer](img/magit.png)
+
 
 2.  Move the cursor to the line of a file in the "Unstaged changes" section and type `s` (for "stage").
     If you want to stage all the files listed in the "Unstaged changes" section type `S` (for "stage all").
@@ -131,14 +134,15 @@ Here are a few of my favorite markdown features.
    at the bottom of my file, then I can include the hyperlink [GitHub][], by simply writing `[GitHub][]`.
    
 -  **Images**.  I often take a screenshot of something I did and store them in a subdirectory of my repo called `img`.
-   Then, if I want the screenshot in the image file, say, `task1-error.png`, to appear in my notes, I include the 
-   following line in my notes markdown file.
+   If, for example, I want include the screenshot in the file `magit.png` (shown above) in my notes, I include the 
+   following line in my `README.md` file.
 
    ```
-   ![screenshot of error encountered during task 1](img/task1-error.png)
+   ![screenshot of magit buffer](img/magit.png)
    ```
    
-   
+minor mod
+
 ----------------------------------
 
 
