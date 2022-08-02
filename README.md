@@ -26,7 +26,7 @@ for showing myself and others what I've done, what worked, didn't work, etc.
 
 2. **Make a remote GitHub repository**.
 
-   In your browser, go to [github.com][], login, click the `+` icon on the top right and select "New repository."
+   In your browser, go to [GitHub.com][], login, click the `+` icon on the top right and select "New repository."
    Give it a name, description, make it public or private and click the green button to create the remote repository.
    
 3. **Link the remote and local repository**.
@@ -125,28 +125,66 @@ There are many tricks for making short work of creating nice looking, useful not
 For example, you can install the Emacs package `markdown-toc` to make the command `markdown-toc-generate-toc` available;
 it generates tables of contents (like the one at the top of this `README.md` file!).
 
-Here are a few of my favorite markdown features.
+Here are a few of my favorite markdown tips.
 
--  **Hyperlinks**. I like to collect all of them at the bottom of the markdown file.  If I put 
+-  **Turn off smartparens-mode**  Especially if you're using Spacemacs, you may
+   wish to turn off `smartparens-mode`.  It seems `smartparens-mode` is
+   activated by default in Spacemacs and, when editing in `markdown-mode`,
+   `smartparens-mode` seems to automatically add matching asterisks in
+   the wrong place when you try to bold a word or phrase with double asterisks.
 
-   `[GitHub.com]: https://github.com/`
-
-   at the bottom of my file, then I can include the hyperlink [GitHub][], by simply writing `[GitHub][]`.
+   To turn `smartparens-mode` off in a particular buffer, type `M-x smartparens-mode`.
    
--  **Images**.  I often take a screenshot of something I did and store them in a subdirectory of my repo called `img`.
-   If, for example, I want include the screenshot in the file `magit.png` (shown above) in my notes, I include the 
-   following line in my `README.md` file.
+   To turn off `smartparens-mode` globally, put the following line in your emacs
+   config file; e.g., `.emacs` (if you use plain vanilla emacs) or the 
+   `defun dotspacemacs/user-config ()` section of `.spacemacs` (if you use spacemacs):
+
+   ```lisp
+   (spacemacs/toggle-smartparens-globally-off)
+   ```
+
+-  **Hyperlinks**. I like to collect all hyperlink targets and labels at the
+   bottom of my markdown file.
+   
+   *Example*. I put the line
+
+   ```markdown
+   [GitHub.com]: https://github.com/
+   ```
+
+   at the bottom of my `README.md` file. Then the hyperlink [GitHub][] can be
+   added to the document by typing `[GitHub][]`.
+   
+-  **Images**.  I often take a screenshot of something I did and store them in a
+   subdirectory of my repo called `img`.
+
+   *Example*. I take a screenshot and save it to a file called `img/magit.png`. 
+   Then I add the screenshot to my document by including the following line in
+   my markdown file.
 
    ```
    ![screenshot of magit buffer](img/magit.png)
    ```
    
-minor mod
+-  **Shortcuts**. 
+
+   - `C-c C-l` (markdown-insert-link) 
+
+**Refs**. [markdown-mode][]
 
 ----------------------------------
 
 
-[github.com]: https://github.com/
+### Links mentioned above
+
+|  |  |
+|--|--|
+| [markdown-mode][] | https://jblevins.org/projects/markdown-mode/ |
+| [GitHub.com][] |  https://github.com/ |
+| [markdowntutorial.com][] | https://www.markdowntutorial.com/ |
+| [markdownguide.org][] | https://www.markdownguide.org/ |
+
+[markdown-mode]: https://jblevins.org/projects/markdown-mode/
 [GitHub.com]: https://github.com/
 [markdowntutorial.com]: https://www.markdowntutorial.com/
 [markdownguide.org]: https://www.markdownguide.org/
